@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.reading-room {
+  padding: 20px;
+}
+
+/* GHẾ */
+.seat {
+  width: 50px;
+  height: 50px;
+  background: #7bed9f;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* HÀNG NGANG SÁT TƯỜNG TRÊN */
+.wall-horizontal {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* LỐI ĐI DƯỚI HÀNG TRÊN */
+.walkway {
+  height: 30px;
+}
+
+/* KHU CHÍNH */
+.room {
+  display: flex;
+  gap: 40px; /* LỐI ĐI GIỮA CÁC KHU */
+  align-items: flex-start;
+}
+
+/* DÃY DỌC SÁT TƯỜNG */
+.wall-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* CỤM BÀN */
+.table-group {
+  display: grid;
+  gap: 10px;
+}
