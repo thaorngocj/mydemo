@@ -1,8 +1,7 @@
+import Home from "./pages/Home";
 
-import ReadingRoom from './pages/ReadingRoom'
 function App() {
-  return <ReadingRoom />
-
+  return <Home />;
 }
 
-export default App
+export default App;
