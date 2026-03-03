@@ -17,6 +17,20 @@ const bookSchema = new mongoose.Schema({
   isHot: {
     type: Boolean,
     default: false
+  },
+  availableQuantity: {
+  type: Number,
+  default: function () {
+    return this.quantity;
+    }
+  },
+  soldQuantity: {
+    type: Number,
+    default: 0
+  },
+  borrowedQuantity: {
+    type: Number,
+    default: 0
   }
 }, { timestamps: true });
 

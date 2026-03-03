@@ -2,6 +2,8 @@ import { useState } from "react";
 import SeatMap from "../components/SeatMap";
 import TimeSelector from "../components/TimeSelector";
 import BookingForm from "../components/BookingForm";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 // import axios from "axios";
 
 export default function Booking() {
@@ -31,26 +33,31 @@ export default function Booking() {
   };
 
   return (
-    <div className="min-h-screen bg-rose-50 py-10">
-      <div className="max-w-6xl mx-auto space-y-10">
-        <SeatMap
-          selectedSeat={selectedSeat}
-          setSelectedSeat={setSelectedSeat}
-        />
+    <>
+      <Navbar />
+        <div className="min-h-screen bg-rose-50 py-10">
+        <div className="max-w-6xl mx-auto space-y-10">
+          <SeatMap
+            selectedSeat={selectedSeat}
+            setSelectedSeat={setSelectedSeat}
+          />
 
-        <TimeSelector
-          selectedTime={selectedTime}
-          setSelectedTime={setSelectedTime}
-        />
+          <TimeSelector
+            selectedTime={selectedTime}
+            setSelectedTime={setSelectedTime}
+          />
 
-        <BookingForm
-          selectedSeat={selectedSeat}
-          selectedTime={selectedTime}
-          userInfo={userInfo}
-          setUserInfo={setUserInfo}
-          handleSubmit={handleSubmit}
-        />
+          <BookingForm
+            selectedSeat={selectedSeat}
+            selectedTime={selectedTime}
+            userInfo={userInfo}
+            setUserInfo={setUserInfo}
+            handleSubmit={handleSubmit}
+          />
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
+    
   );
 }
